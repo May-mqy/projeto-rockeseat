@@ -1,3 +1,9 @@
 body {
-    background-color: black
+    background-image: url(./imagens/bg-mobile.jpg);
+    background-repeat: no-repeat; /* Não repetir a imagem de fundo */
+    background-position: top center; /* Centraliza a imagem de fundo */
+    background-size: cover; /* Serve para cobrir toda a tela com a imagem */ 
+
+    /* É possivel definir tudo isso usando uma única propriedade = background: color image repeat position/size */
+    /* background: url(./imagens/bg-mobile.jpg) no-repeat top center / cover; */
 }
