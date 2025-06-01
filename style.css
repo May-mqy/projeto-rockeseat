@@ -7,3 +7,15 @@ body {
     /* É possivel definir tudo isso usando uma única propriedade = background: color image repeat position/size */
     /* background: url(./imagens/bg-mobile.jpg) no-repeat top center / cover; */
 }
+
+#container {
+    width: 360px; /* Largura do container */
+    height: 712px; /* Altura do container */
+    border: 1px solid red; /* Borda do container */
+    margin-right:auto; /* Centraliza o container horizontalmente */
+}
+
+#profile img {
+    width: 112px; 
+    margin: auto; /* Centraliza a imagem do perfil */
+}
