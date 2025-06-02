@@ -1,22 +1,36 @@
+* {
+    margin: 0; /* Remove a margem padrão */
+    padding: 0; /* Remove o preenchimento padrão */
+    box-sizing: border-box; /* Inclui bordas e preenchimentos no tamanho total do elemento */
+}
+
 body {
     /* É possivel definir usando uma única propriedade = background: color image repeat position/size */
     background: url(./imagens/bg-mobile.jpg) no-repeat top center / cover; 
 }
 
+body * /* para aplicar o estilo a todos os elementos dentro do body */{
+    font-family: 'Inter', sans-serif;
+    color: #FFFFFF; /* Cor do texto */
+}
+
 #container {
     width: 360px; /* Largura total da tela */
-    border: 1px solid red; /* Borda do container */
-    margin:auto; /* Centraliza o container horizontalmente */
-    
+    border: 1px solid purple none; /* Borda roxa */
+    margin: 56px auto 0px auto; /* Margem pra todos os lados*/
 }
 
 #profile {
     text-align:center; /* Centraliza o conteúdo do perfil */
+    padding: 24px; /* Preenchimento interno do perfil */
 } 
 
 #profile img {
-    display:block; /* Remove o espaço abaixo da imagem */
     width: 112px; 
-    margin: auto; /* Centraliza a imagem do perfil */
-    
+}
+
+#profile p {
+    font-weight: 500; /* Peso da fonte */
+    line-height: 24px; /* Altura da linha */
+    margin-top: 8px; /* Margem superior do @May-mqy */
 }
