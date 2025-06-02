@@ -1,21 +1,22 @@
 body {
-    background-image: url(./imagens/bg-mobile.jpg);
-    background-repeat: no-repeat; /* Não repetir a imagem de fundo */
-    background-position: top center; /* Centraliza a imagem de fundo */
-    background-size: cover; /* Serve para cobrir toda a tela com a imagem */ 
-
-    /* É possivel definir tudo isso usando uma única propriedade = background: color image repeat position/size */
-    /* background: url(./imagens/bg-mobile.jpg) no-repeat top center / cover; */
+    /* É possivel definir usando uma única propriedade = background: color image repeat position/size */
+    background: url(./imagens/bg-mobile.jpg) no-repeat top center / cover; 
 }
 
 #container {
-    width: 360px; /* Largura do container */
-    height: 712px; /* Altura do container */
+    width: 360px; /* Largura total da tela */
     border: 1px solid red; /* Borda do container */
-    margin-right:auto; /* Centraliza o container horizontalmente */
+    margin:auto; /* Centraliza o container horizontalmente */
+    
 }
 
+#profile {
+    text-align:center; /* Centraliza o conteúdo do perfil */
+} 
+
 #profile img {
+    display:block; /* Remove o espaço abaixo da imagem */
     width: 112px; 
     margin: auto; /* Centraliza a imagem do perfil */
+    
 }
