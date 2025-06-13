@@ -34,3 +34,29 @@ body * /* para aplicar o estilo a todos os elementos dentro do body */{
     line-height: 24px; /* Altura da linha */
     margin-top: 8px; /* Margem superior do @May-mqy */
 }
+
+/*links */
+ul {
+    list-style: none;
+
+    display: flex; /*adaptavel */
+    flex-direction: column; /*coluna flexivel */
+    gap: 16px; /* Espaço entre os elementos*/
+}
+
+ul li a{
+    /*border: 1px solid red; */
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 16px 24px; 
+
+    background: rgba(255, 255, 255, 0.1); /*quarta propriedade é a transparencia */
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 8px; /*arredonda */
+
+    backdrop-filter: bluer(4px);
+}
+
