@@ -1,2 +1,2 @@
 Tentativa: Criar um simples site
-base: site Rockeseat
+base: Curso Discover da Rockeseat

@@ -4,14 +4,38 @@
     box-sizing: border-box; /* Inclui bordas e preenchimentos no tamanho total do elemento */
 }
 
+:root {
+    --text-color: white;
+    --bg-url: url(./imagens/bg-desktop.jpg);
+    
+    --stroke-color:rgba(255, 255, 255, 0.5); /* Cor da borda dos links */
+    --surface-color:rgba(255, 255, 255, 0.05); /* Cor de fundo dos links */
+    --surface-color-hover:rgba(255, 255, 255, 0.02); /* Cor de fundo dos links ao passar o mouse */
+    --highlight-color:rgba(255, 255, 255, 0.2); /* Cor de destaque */
+
+}
+
+ .light {
+    --text-color: black; /* Cor do texto para o modo claro */
+    --bg-url: url(./imagens/bg-desktop-light.jpg); /* URL da imagem de fundo para o modo claro */
+
+    --stroke-color: rgba(0, 0, 0, 0.5); /* Cor da borda para o modo claro */
+    --surface-color: rgba(0, 0, 0, 0.05); /* Cor de fundo dos links para o modo claro */
+    --surface-color-hover: rgba(3, 2, 2, 0.02);
+    --highlight-color: rgba(0, 0, 0, 0.1); /* Cor de destaque para o modo claro */
+
+
+
+}
+
 body {
     /* É possivel definir usando uma única propriedade = background: color image repeat position/size */
-    background: url(./imagens/bg-mobile.jpg) no-repeat top center / cover; 
+    background: var(--bg-url) no-repeat top center / cover; 
 }
 
 body * /* para aplicar o estilo a todos os elementos dentro do body */{
     font-family: 'Inter', sans-serif;
-    color: #FFFFFF; /* Cor do texto */
+    color: var(--text-color);
 }
 
 #container {
@@ -44,19 +68,59 @@ ul {
     gap: 16px; /* Espaço entre os elementos*/
 }
 
-ul li a{
-    /*border: 1px solid red; */
-
+ul li a {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center; /*ou text-align: center; */
 
     padding: 16px 24px; 
 
-    background: rgba(255, 255, 255, 0.1); /*quarta propriedade é a transparencia */
-    border: 1px solid rgba(255, 255, 255, 0.5);
+    background: var(--surface-color); 
+    border: 1px solid var(--stroke-color);
     border-radius: 8px; /*arredonda */
 
-    backdrop-filter: bluer(4px);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+
+    text-decoration: none; /* Remove o sublinhado do link */
+    font-weight: 500; /* ou bold, Deixa o texto em negrito */
+
+    transition: background 0.2s;
 }
 
+/* pseudo-selector */
+ul li a:hover {
+    background: var(--surface-color-hover); /* Altera o fundo ao passar o mouse */
+    border: 1.5px solid var(--text-color); /* Altera a cor da borda ao passar o mouse */
+}
+
+/* Social Media */
+#Social-Links {
+    display: flex; /* Flexbox para alinhar os itens */
+    justify-content: center; /* Centraliza os ícones */
+
+    padding: 24px 0;
+    font-size: 24px; /* Tamanho do ícone */
+}
+
+#Social-Links a {
+
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centraliza os ícones */
+    padding: 16px;
+
+    transition: background 0.2s;
+    border-radius: 50%; /* Arredonda os ícones */
+}
+
+#Social-Links a:hover {
+    background: var(--highlight-color); /* Altera o fundo ao passar o mouse */
+    
+}
+
+footer {
+    text-align: center; /* Alinha o texto do rodapé */
+    padding: 24px;
+    font-size: 14px;
+}
