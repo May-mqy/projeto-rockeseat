@@ -12,6 +12,7 @@
     --surface-color:rgba(255, 255, 255, 0.05); /* Cor de fundo dos links */
     --surface-color-hover:rgba(255, 255, 255, 0.02); /* Cor de fundo dos links ao passar o mouse */
     --highlight-color:rgba(255, 255, 255, 0.2); /* Cor de destaque */
+    --switch-bg-url: url(./moon-stars.svg); /* URL da imagem de fundo do botão de alternância */
 
 }
 
@@ -23,6 +24,7 @@
     --surface-color: rgba(0, 0, 0, 0.05); /* Cor de fundo dos links para o modo claro */
     --surface-color-hover: rgba(3, 2, 2, 0.02);
     --highlight-color: rgba(0, 0, 0, 0.1); /* Cor de destaque para o modo claro */
+    --switch-bg-url: url(./sun.svg); /* URL da imagem de fundo do botão de alternância para o modo claro */
 
 
 
@@ -58,6 +60,42 @@ body * /* para aplicar o estilo a todos os elementos dentro do body */{
     line-height: 24px; /* Altura da linha */
     margin-top: 8px; /* Margem superior do @May-mqy */
 }
+#switch {
+    position: relative;
+    width: 64px;
+
+    margin: 4px auto;
+}
+
+#switch button {
+    width: 32px;
+    height:32px;
+    background: white var(--switch-bg-url) no-repeat center;
+    border: 0;
+    border-radius: 50%; /* Arredonda o botão */
+
+    position:absolute;
+    top: 50%;
+    left: 0;
+    z-index: 1; /* Coloca o botão acima de outros elementos */
+    transform: translateY(-50%); /* Centraliza verticalmente o botão */
+}
+
+.light #switch button {
+    right: 0;
+    left: initial; /* Reseta a posição do botão no modo claro */
+}
+
+#switch span{
+    display:block;
+    width: 64px;
+    height: 24px;
+    background: var(--surface-color);
+    border: 1px solid var(--stroke-color);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 9999px;
+}
 
 /*links */
 ul {
@@ -66,9 +104,12 @@ ul {
     display: flex; /*adaptavel */
     flex-direction: column; /*coluna flexivel */
     gap: 16px; /* Espaço entre os elementos*/
+    
+    margin-top: 20px;
 }
 
 ul li a {
+    
     display: flex;
     align-items: center;
     justify-content: center; /*ou text-align: center; */
