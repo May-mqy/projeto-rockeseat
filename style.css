@@ -41,7 +41,8 @@ body * /* para aplicar o estilo a todos os elementos dentro do body */{
 }
 
 #container {
-    width: 360px; /* Largura total da tela */
+    width: 100%; /* Largura total da tela */
+    max-width:588px;
     border: 1px solid purple none; /* Borda roxa */
     margin: 56px auto 0px auto; /* Margem pra todos os lados*/
 }
