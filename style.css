@@ -6,25 +6,25 @@
 
 :root {
     --text-color: white;
-    --bg-url: url(./imagens/bg-desktop.jpg);
+    --bg-url: url(./assets/imagens/bg-mobile.jpg);
     
     --stroke-color:rgba(255, 255, 255, 0.5); /* Cor da borda dos links */
     --surface-color:rgba(255, 255, 255, 0.05); /* Cor de fundo dos links */
     --surface-color-hover:rgba(255, 255, 255, 0.02); /* Cor de fundo dos links ao passar o mouse */
     --highlight-color:rgba(255, 255, 255, 0.2); /* Cor de destaque */
-    --switch-bg-url: url(./Moon-starts.svg); /* URL da imagem de fundo do botão de alternância */
+    --switch-bg-url: url(./assets/Moon-starts.svg); /* URL da imagem de fundo do botão de alternância */
 
 }
 
  .light {
     --text-color: black; /* Cor do texto para o modo claro */
-    --bg-url: url(./imagens/bg-desktop-light.jpg); /* URL da imagem de fundo para o modo claro */
+    --bg-url: url(./assets/ imagens/bg-mobile-light.jpg); /* URL da imagem de fundo para o modo claro */
 
     --stroke-color: rgba(0, 0, 0, 0.5); /* Cor da borda para o modo claro */
     --surface-color: rgba(0, 0, 0, 0.05); /* Cor de fundo dos links para o modo claro */
     --surface-color-hover: rgba(3, 2, 2, 0.02);
     --highlight-color: rgba(0, 0, 0, 0.1); /* Cor de destaque para o modo claro */
-    --switch-bg-url: url(./sun.svg); /* URL da imagem de fundo do botão de alternância para o modo claro */
+    --switch-bg-url: url(./assets/Sun.svg); /* URL da imagem de fundo do botão de alternância para o modo claro */
 
 
 
@@ -38,11 +38,12 @@ body {
 body * /* para aplicar o estilo a todos os elementos dentro do body */{
     font-family: 'Inter', sans-serif;
     color: var(--text-color);
+    height: auto;
 }
 
 #container {
     width: 100%; /* Largura total da tela */
-    max-width:588px;
+    max-width:500px;
     border: 1px solid purple none; /* Borda roxa */
     margin: 56px auto 0px auto; /* Margem pra todos os lados*/
 }
@@ -165,4 +166,15 @@ footer {
     text-align: center; /* Alinha o texto do rodapé */
     padding: 24px;
     font-size: 14px;
+}
+
+/* media queries */
+@media (min-width: 700px){
+    :root {
+        --bg-url: url(./assets/imagens/bg-desktop.jpg);
+    }
+
+    .light {
+        --bg-url: url(./assets/imagens/bg-desktop-light.jpg);
+    }
 }

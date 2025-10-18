@@ -7,11 +7,11 @@ function toggleMode() {
   //substituir a imagem
     if(html.classList.contains('light')) {
   //Se tiver Ligth mode, adicionar a imagem light
-      img.setAttribute("src", "./imagens/avatar May-light.png")
+      img.setAttribute("src", "./assets/imagens/avatar May-light.png")
       img.setAttribute("alt", "Imagem da Mayara sorrindo no carro, cabelos cacheados e cropped roxo."  )
     } else {
  //se tiver sem Light mode, manter a imagem normal
-      img.setAttribute("src", "./imagens/avatar May-dark.png")
+      img.setAttribute("src", "./assets/imagens/avatar May-dark.png")
       img.setAttribute("alt", "Foto de Mayara sorrindo sem mostrar os dentes, com cabelos soltos cacheados.")
   }
 }
