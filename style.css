@@ -81,11 +81,18 @@ body * /* para aplicar o estilo a todos os elementos dentro do body */{
     left: 0;
     z-index: 1; /* Coloca o botão acima de outros elementos */
     transform: translateY(-50%); /* Centraliza verticalmente o botão */
+
+    animation: slide-out 0.4s;
 }
 
 .light #switch button {
-    right: 0;
-    left: initial; /* Reseta a posição do botão no modo claro */
+    animation: slide-in 0.4s forwards; /* forwards mantém o estado final da animação */
+
+    /*left: initial;  Reseta a posição do botão no modo claro */
+}
+
+#switch button:hover {
+    outline: 8px solid var(--highlight-color);
 }
 
 #switch span{
@@ -176,5 +183,25 @@ footer {
 
     .light {
         --bg-url: url(./assets/imagens/bg-desktop-light.jpg);
+    }
+}
+
+/*animation */
+@keyframes slide-in { /*definem animações */
+    from{
+        left: 0;
+    }
+    to{
+        left: 50%;
+    }
+
+} 
+
+@keyframes slide-out {
+    from{
+        left: 50%;
+    }
+    to{
+        left: 0;
     }
 }

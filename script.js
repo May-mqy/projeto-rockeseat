@@ -7,7 +7,7 @@ function toggleMode() {
   //substituir a imagem
     if(html.classList.contains('light')) {
   //Se tiver Ligth mode, adicionar a imagem light
-      img.setAttribute("src", "./assets/imagens/avatar May-light.png")
+      img.setAttribute("src", "./assets/imagens/Avatar May-light.png")
       img.setAttribute("alt", "Imagem da Mayara sorrindo no carro, cabelos cacheados e cropped roxo."  )
     } else {
  //se tiver sem Light mode, manter a imagem normal
